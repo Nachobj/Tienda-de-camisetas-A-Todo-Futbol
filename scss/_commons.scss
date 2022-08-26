@@ -1,0 +1,95 @@
+body{
+    background-color: black !important;
+}
+.galeria{
+	display: flex;
+	justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div figcaption{
+    font-size: 20px;
+    justify-content: center;
+}
+
+/*Extends*/
+.btnGeneral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease all;
+    &:hover{
+        background: black;
+        color: yellow;
+        border-color: yellow;
+    }
+}
+
+.btnNewslwtter{
+    @extend .btnGeneral;
+    width: 40%;
+    height: 35px;
+    background-color: $secondaryColor;
+    color: $colorPrimary;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.btnCompra{
+    @extend .btnGeneral;
+    width: 40%;
+    height: 38px;
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.btnCodigo{
+    @extend .btnGeneral;
+    width: 20%;
+    height: 35px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/*Mixins*/
+@mixin texto-principal ($fontSize, $height, $fontWeigth) {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    font-size: $fontSize;
+    font-weight: $fontWeigth;
+    font-family: $fontTwo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    height: $height;
+}
+
+/*maps*/
+$paleta: (
+   'primary': $colorPrimary,
+   'secondary': $secondaryColor,
+   'third': $thirdColor,
+   'fourth': $fourthColor,
+   'fifth': $fifthColor,
+)
+
+
+
+
+
+
+   

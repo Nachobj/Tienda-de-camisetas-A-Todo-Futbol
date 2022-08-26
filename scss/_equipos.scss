@@ -1,0 +1,721 @@
+/*CSS EQUIPOS*/
+.contenedor{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header"
+    "section main"
+    "aside aside"
+    "footer footer";
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.header{
+    grid-area: header;
+}
+#filtros{
+    grid-area: section;
+}
+main{
+    grid-area: main;
+}
+aside{
+    grid-area: aside;
+}
+.pie-pagina{
+    grid-area: contacto;
+}
+@media (max-width:618px)
+{
+    .contenedor{
+        grid-template-areas:
+        "header"
+        "section"
+        "main"
+        "aside"
+        "contacto";
+        grid-template-columns: $w-100;
+    }
+    /* Inicia Botonera */
+    .botonera{
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .navbar-brand{
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: map-get($map: $paleta, $key: 'third');
+            .logo-nav{
+                width: 62vw;
+            }
+        }
+        button{
+            border: none;
+            .btnBurguer{
+                width: 40px;
+                height: 40px;
+                fill: map-get($map: $paleta, $key: 'secondary');
+                border: none;
+                rect{
+                    width: 90%;
+                    height: 10px;
+                }  
+            }
+        }
+        ul li a{
+            color: map-get($map: $paleta, $key: 'secondary');
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+            font-weight: 350;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% $w-100;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .3s;
+            &:hover{
+                color: rgb(251, 255, 3);
+                font-weight: 600;
+                background-size: $w-100 1px;
+            }
+        }
+    }
+    /* Fin Botonera */
+    .banBvb{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+    }
+    .encabezados{
+        @include texto-principal ($textMd, 80px, 300)
+    }
+    /* Inicia Filtros */
+    #filtros{
+        justify-content: center;
+        width: auto;
+        .accordion{
+            width: 70%;
+            margin: 0 auto;
+            button{
+                color: map-get($map: $paleta, $key: 'third');
+                .cat-acordion{
+                    color: map-get($map: $paleta, $key: 'primary');
+                }
+            }
+            .form-check{
+                margin-left: 20px;
+                .tex-cat{
+                    color: map-get($map: $paleta, $key: 'primary');
+                    font-size: 16px;
+                }
+            }
+        }
+    } 
+    /*Fin Filtros*/
+    /* Inicia Main */
+    .card{
+        margin: 50px;
+        width: 250px;
+        padding: .8em;
+        background: map-get($map: $paleta, $key: 'third');
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        .card-img{
+            width: $w-100;
+            border-radius: .5rem;
+            transition: .3s ease;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-25%);
+                box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+            }
+        }
+        .card-info{
+            padding-top: 10%;
+            .text-title{
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .text-body{
+                font-size: .9em;
+            }
+        }
+        .card-footer{
+            width: $w-100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid map-get($map: $paleta, $key: 'primary');
+            .text-title{
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .card-button{
+                border: 1px solid #252525;
+                display: flex;
+                padding: .3em;
+                cursor: pointer;
+                border-radius: $p-50;
+                transition: .3s ease-in-out;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &:hover{
+                    border: 1px solid map-get($map: $paleta, $key: 'primary');
+                    background-color: map-get($map: $paleta, $key: 'secondary');
+                }
+            }
+        }
+    }
+    /* Fin Main */
+    /* Inicia Aside */
+    .descuento{
+        background-color: map-get($map: $paleta, $key: 'secondary');
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo-descuento{
+            font-size: $textSm-1;
+            font-family: $fontTree;
+            color: map-get($map: $paleta, $key: 'primary');
+        }
+    }
+    /* Fin Aside */
+    /* Inicia Footer */
+    .pie-pagina{
+        width: $w-100;
+        background-color: map-get($map: $paleta, $key: 'primary');
+        text-align: left;
+        .grupo-1{
+            margin: 5px;
+            padding: 45px 0;
+            .box{
+                font-size: $textSm;
+                color: map-get($map: $paleta, $key: 'third');
+                h3{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    font-size: $textSm-1;
+                    margin: 10px 0;
+                }
+                a{
+                    color: map-get($map: $paleta, $key: 'third');
+                    text-decoration: none;
+                    font-size: $textSm;
+                    margin: 5px;
+                    display: block;
+                }
+                p{
+                    margin: 10px 0;
+                    color: map-get($map: $paleta, $key: 'third');
+                }
+                .red-social{
+                    a{
+                        display: inline-block;
+                    }
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($map: $paleta, $key: 'secondary');
+                        margin: 10px 3px;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+        .grupo-2{
+            height: 60px;
+            hr{
+                box-sizing: content-box;
+                height: 0;
+                margin-top: $textSm;
+                border: 0;
+                border-top: 2px solid map-get($map: $paleta, $key: 'third');
+            }
+            p{
+                color: map-get($map: $paleta, $key: 'third');
+                font-size: $textSm;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+    /* Fin Footer */
+}
+
+@media (min-width:619px) and (max-width:1023px)
+{
+    .contenedor{
+        grid-template-columns: 10% 90%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header header"
+        "section section"
+        "main main"
+        "aside aside"
+        "contacto contacto";
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        overflow: hidden;
+    }
+    /* Inicia Botonera */
+    .botonera{
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .navbar-brand{
+            text-decoration: none;
+            font-size: $textMd;
+            margin: 0 5px;
+            color: map-get($map: $paleta, $key: 'third');
+            display: flex;
+            .logo-nav{
+                width: $w-100;
+            }
+        }
+        button{
+            border: none;
+            .btnBurguer{
+                width: 40px;
+                height: 40px;
+                fill: map-get($map: $paleta, $key: 'secondary');
+                border: none;
+                rect{
+                    width: 90%;
+                    height: 10px;
+                } 
+            }
+        }
+        ul{
+            margin: 0 10px;
+            li{
+                margin: 2px;
+                a{
+                    font-size: $textSm;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    line-height: 1.6rem;
+                    font-weight: 350;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% $w-100;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover{
+                        color: rgb(251, 255, 3);
+                        font-weight: 600;
+                        background-size: $w-100 2px;
+                    }
+                }
+            }
+        }
+    }
+    /* Fin Botonera */
+    .banBvb{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+    }
+    .encabezados{
+        @include texto-principal ($textMd-1, $p-100, 350)
+    }
+    /* Inicia Filtros */
+    #filtros{
+        .accordion{
+            width: 40%;
+            margin: 30px auto;
+            button{
+                color: map-get($map: $paleta, $key: 'third');
+                .cat-acordion{
+                    color: map-get($map: $paleta, $key: 'primary');
+                }
+            }
+            .form-check{
+                margin: 5px;
+                .tex-cat{
+                    color: map-get($map: $paleta, $key: 'primary');
+                    font-size: $textSm;
+                }
+            }
+        }
+    } 
+    /* Fin Filtros */
+    /* Inicia Main */
+    .card{
+        margin: $p-50;
+        width: 250px;
+        padding: .8em;
+        background: map-get($map: $paleta, $key: 'third');
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        .card-img{
+            width: $w-100;
+            border-radius: .5rem;
+            transition: .3s ease;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-25%);
+                box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+            }
+        }
+        .card-info{
+            padding-top: 10%;
+            .text-title{
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .text-body{
+                font-size: .9em;
+            }
+        }
+        .card-footer{
+            width: $w-100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid map-get($map: $paleta, $key: 'primary');
+            .text-title{
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .card-button{
+                border: 1px solid #252525;
+                display: flex;
+                padding: .3em;
+                cursor: pointer;
+                border-radius: $p-50;
+                transition: .3s ease-in-out;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &:hover{
+                    border: 1px solid map-get($map: $paleta, $key: 'primary');
+                    background-color: map-get($map: $paleta, $key: 'secondary');
+                }
+            }
+        }
+    }
+    /* Fin Main */
+    /* Inicia Aside */
+    .descuento{
+        background-color: map-get($map: $paleta, $key: 'secondary');
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        .titulo-descuento{
+            font-size: 1.8rem;
+            font-family: $fontTree;
+            color: map-get($map: $paleta, $key: 'primary');
+        }
+    }
+    /* Fin Aside */
+    /* Inicia Footer */
+    .pie-pagina{
+        width: $w-100;
+        background-color: map-get($map: $paleta, $key: 'primary');
+        text-align: center;
+        .grupo-1{
+            margin: 10px;
+            padding: 45px 0;
+            display: block;
+            .box{
+                font-size: 20px;
+                color: map-get($map: $paleta, $key: 'third');
+                h3{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    font-size: $textSm-1;
+                    margin: 10px 0;
+                }
+                a{
+                    color: map-get($map: $paleta, $key: 'third');
+                    text-decoration: none;
+                    margin: auto;
+                    margin: 10px 0;
+                    font-size: $textSm-1;
+                }
+                p{
+                    margin: 10px 0;
+                    color: map-get($map: $paleta, $key: 'third');
+                }
+                .red-social{
+                    a{
+                        display: inline-block;
+                    }
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($map: $paleta, $key: 'secondary');
+                        margin: 10px 3px;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+        .grupo-2{
+            height: 60px;
+            hr{
+                box-sizing: content-box;
+                height: 0;
+                margin-top: $textSm;
+                border: 0;
+                border-top: 2px solid map-get($map: $paleta, $key: 'third');
+            }
+            p{
+                color: map-get($map: $paleta, $key: 'third');
+                font-size: $textSm;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+    /*Fin Footer*/
+}
+
+@media (min-width: 1024px)
+{
+   .contenedor{
+     grid-template-columns: 20% 80%;
+     grid-template-rows: auto;
+     grid-template-areas: 
+     "header header"
+     "section main"
+     "aside aside"
+     "contacto contacto";
+    }
+   
+    /* Inicia Botonera */
+    .botonera{
+        background-color: map-get($map: $paleta, $key: 'primary');
+        height: 110px;
+        .navbar-brand{
+            text-decoration: none;
+            font-size: $textMd-1;
+            margin: 0 10px;
+            color: map-get($map: $paleta, $key: 'third');
+            .logo-nav{
+                width: $w-100;
+            }
+        }
+        ul{
+            margin: 0 20px;
+            li{
+                margin: 5px;
+                a{
+                    font-size: $textSm-1;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    line-height: 1.6rem;
+                    font-weight: 350;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% $w-100;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover{
+                        color: rgb(251, 255, 3);
+                        font-weight: 600;
+                        background-size: $w-100 2px;
+                    }
+                }
+            }
+        }
+    }
+    /* Fin Botonera */
+    .banBvb{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+    }
+    .encabezados{
+        @include texto-principal (3.5rem, 120px, 400)
+    }
+    /* Inicia Filtros */
+    #filtros{
+        .accordion{
+            width: 95%;
+            margin: 20px 50px;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            button{
+                color: map-get($map: $paleta, $key: 'third');
+                .cat-acordion{
+                    color: map-get($map: $paleta, $key: 'primary');
+                }
+            }
+            .form-check{
+                margin-left: 20px;
+                color: map-get($map: $paleta, $key: 'primary');
+                .tex-cat{
+                    color: map-get($map: $paleta, $key: 'primary');
+                    font-size: $textSm;
+                }
+            }
+        }   
+    }
+    /* Fin Filtros */
+    /* Inicia Main  */
+    .card{
+        margin: $p-50;
+        width: 250px;
+        padding: .8em;
+        background: map-get($map: $paleta, $key: 'third');
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        .card-img{
+            width: $w-100;
+            border-radius: .5rem;
+            transition: .3s ease;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-25%);
+                box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+            }
+        }
+        .card-info{
+            padding-top: 10%;
+            .text-title{
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .text-body{
+                font-size: .9em;
+            }
+        }
+        .card-footer{
+            width: $w-100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid map-get($map: $paleta, $key: 'primary');
+            .text-title{
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .card-button{
+                border: 1px solid #252525;
+                display: flex;
+                padding: .3em;
+                cursor: pointer;
+                border-radius: $p-50;
+                transition: .3s ease-in-out;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &:hover{
+                    border: 1px solid map-get($map: $paleta, $key: 'primary');
+                    background-color: map-get($map: $paleta, $key: 'secondary');
+                }
+            }
+        }   
+    }
+    /*  Fin Main */
+    /* Inicia Aside */
+    .descuento{
+        background-color: map-get($map: $paleta, $key: 'secondary');
+        height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo-descuento{
+            font-size: $textMd-1;
+            font-family: $fontTree;
+            color: map-get($map: $paleta, $key: 'primary');
+        }
+    }
+    /*Fin Aside*/
+    /* Inicia Footer */
+    .pie-pagina{
+        width: $w-100;
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .grupo-1{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: $w-100;
+            margin: auto;
+            padding: 45px 0;
+            text-align: center;
+            .box{
+                font-size: 20px;
+                color: map-get($map: $paleta, $key: 'third');
+                h3{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    font-size: $textSm-1;
+                    margin: 10px 0;
+                }
+                a{
+                    color: map-get($map: $paleta, $key: 'third');
+                    text-decoration: none;
+                    margin: 40px;
+                    font-size: 1.3rem;
+                }
+                p{
+                    margin: 10px 0;
+                    color: map-get($map: $paleta, $key: 'third');
+                    font-size: 1.3rem;
+                }
+                .red-social{
+                    a{
+                        display: inline-block;
+                    }
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($map: $paleta, $key: 'secondary');
+                        margin: 10px 3px;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+        .grupo-2{
+            height: 60px;
+            hr{
+                box-sizing: content-box;
+                height: 0;
+                margin-top: $textSm;
+                border: 0;
+                border-top: 2px solid map-get($map: $paleta, $key: 'third');
+            }
+            p{
+                color: map-get($map: $paleta, $key: 'third');
+                font-size: $textSm;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }   
+    /* Fin Footer */   
+}   
+
+
+
+
+
+
+
+
+
+
+
+

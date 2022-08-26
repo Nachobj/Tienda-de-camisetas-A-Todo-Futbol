@@ -1,0 +1,817 @@
+/*CSS NOSOTROS*/
+
+@media (max-width:618px)
+{
+    body{
+        background-color: map-get($map: $paleta, $key: 'primary');
+    }
+    /* Inicia Botonera */
+    .botonera{
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .navbar-brand{
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: map-get($map: $paleta, $key: 'third');
+            .logo-nav{
+                width: 62vw;
+            }
+        }
+        button{
+            border: none;
+            .btnBurguer{
+                width: 40px;
+                height: 40px;
+                fill: map-get($map: $paleta, $key: 'secondary');
+                border: none;
+                rect{
+                    width: 90%;
+                    height: 10px;
+                } 
+            }
+        }
+        ul li a{
+            color: map-get($map: $paleta, $key: 'secondary');
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+            font-weight: 350;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% $w-100;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .3s;
+            &:hover{
+                color: rgb(251, 255, 3);
+                font-weight: 600;
+                background-size: $w-100 1px;
+            }
+        }
+    }
+    .banMadrid{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+    }
+    .encabezados{
+        @include texto-principal ($textMd, 80px, 300)
+    }
+    /* Fin Botonera */
+    /* Inicia Main */
+    .nosotros{
+        margin: 30px;
+        padding: 10px;
+        font-size: $textSm-1;
+        color: map-get($map: $paleta, $key: 'third');
+        display: block;
+        .quienesSomos{
+            text-align: center;
+            .text-quienessomos{
+                h2{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    text-align: center;
+                    font-size: $textMd;
+                    padding: 5px;
+                    font-family: $fontTree;                }
+                p{
+                    font-family: $fontOne;
+                    font-weight: $textRegular;
+                }
+            }
+        }
+        .box-contacto-uno{
+            margin: 20px;
+            padding: 10px;
+            .iconos-contacto{
+                text-align: center;
+                .iconos{
+                    width: 40px;
+                    height: 40px;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                }
+                p{
+                    font-size: $textSm-1;
+                }
+            }
+        }
+        .box-contacto-dos{
+            padding: 5px;
+            h2{
+                font-size: $textMd;
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: center;
+                margin: 20px;
+                font-family: $fontTree;
+            }
+            .formContent{
+                margin: 10px;
+                font-size: $textSm-1;
+            }
+            .box-botonMsj{
+                display: flex;
+                justify-content: center;
+                .botonMsj{
+                    font-family: inherit;
+                    font-size: 20px;
+                    background: map-get($map: $paleta, $key: 'secondary');
+                    color: map-get($map: $paleta, $key: 'primary');
+                    padding: 0.7em 1em;
+                    padding-left: 0.9em;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    svg{
+                        display: block;
+                        transform-origin: center center;
+                        transition: transform 0.3s ease-in-out;
+                    }
+                    a{
+                        text-decoration: none;
+                        span{
+                            display: block;
+                            margin-left: 0.3em;
+                            transition: all 0.3s ease-in-out;
+                            text-decoration: none;
+                            color: map-get($map: $paleta, $key: 'primary');
+                        }
+                    }
+                    &:hover{
+                        .svg-flecha {
+                            animation: fly-1 0.6s ease-in-out infinite alternate;
+                        }
+                        svg {
+                            transform: translateX(1.2em) rotate(45deg) scale(1.1);
+                        }
+                        span {
+                            transform: translateX(5em);
+                        }
+                    }
+                    &:active{
+                        transform: scale(0.95);
+                    } 
+                    @keyframes fly-1 {
+                        from {
+                            transform: translateY(0.1em);
+                        }
+                        to {
+                            transform: translateY(-0.1em);
+                        }
+                    }
+                }
+            }
+            .mapa{
+                text-align: center;
+                margin: 10px 0;
+                iframe{
+                    width: $w-100;
+                    height: 250px;
+                }
+            }
+        }
+        .preguntas{
+            text-align: center;
+            .subNosotros{
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: center;
+                font-size: $textMd;
+                margin: 15px;
+                font-family: $fontTree;
+            }
+            .textoAcordion{
+                font-size: $textSm;
+            }
+        }
+        .cuidadosProducto{
+            margin: 30px 0;
+            h2{
+                color: $secondaryColor;
+                font-family: $fontTree;
+                text-align: center;
+                font-size: $textMd;
+            }
+        }
+    }
+
+    /* Fin MAIN  */
+    /* Inicia Aside */
+    .descuento{
+        background-color: map-get($map: $paleta, $key: 'secondary');
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo-descuento{
+            font-size: $textSm-1;
+            font-family: $fontTwo;
+            color: map-get($map: $paleta, $key: 'primary');
+            margin: 0 auto;
+        }
+    }   
+    /* Fin Aside */
+    /* Inicia Footer */
+    .pie-pagina{
+        width: $w-100;
+        background-color: map-get($map: $paleta, $key: 'primary');
+        text-align: left;
+        .grupo-1{
+            margin: 5px;
+            padding: 45px 0;
+            .box{
+                font-size: $textSm;
+                color: map-get($map: $paleta, $key: 'third');
+                h3{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    font-size: $textSm-1;
+                    margin: 10px 0;
+                }
+                a{
+                    color: map-get($map: $paleta, $key: 'third');
+                    text-decoration: none;
+                    font-size: $textSm;
+                    margin: 5px;
+                    display: block;
+                }
+                p{
+                    margin: 10px 0;
+                    color: map-get($map: $paleta, $key: 'third');
+                }
+                .red-social{
+                    a{
+                        display: inline-block;
+                    }
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($map: $paleta, $key: 'secondary');
+                        margin: 10px 3px;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+        .grupo-2{
+            height: 60px;
+            hr{
+                box-sizing: content-box;
+                height: 0;
+                margin-top: $textSm;
+                border: 0;
+                border-top: 2px solid map-get($map: $paleta, $key: 'third');
+            }
+            p{
+                color: map-get($map: $paleta, $key: 'third');
+                font-size: $textSm;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+    /* Fin Footer */
+}
+
+@media (min-width:619px) and (max-width: 1023px){
+
+    .botonera{
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .navbar-brand{
+            text-decoration: none;
+            font-size: $textMd;
+            margin: 0 5px;
+            color: map-get($map: $paleta, $key: 'third');
+            display: flex;
+            .logo-nav{
+                width: $w-100;
+            }
+        }
+        button{
+            border: none;
+            .btnBurguer{
+                width: 40px;
+                height: 40px;
+                fill: map-get($map: $paleta, $key: 'secondary');
+                border: none;
+                rect{
+                    width: 90%;
+                    height: 10px;
+                } 
+            }
+        }
+        ul{
+            margin: 0 10px;
+            li{
+                margin: 2px;
+                a{
+                    font-size: $textSm;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    line-height: 1.6rem;
+                    font-weight: 350;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% $w-100;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover{
+                        color: rgb(251, 255, 3);
+                        font-weight: 600;
+                        background-size: $w-100 2px;
+                    }
+                }
+            }
+        }
+    }
+    .banMadrid{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+    }
+    .encabezados{
+        @include texto-principal ($textMd-1, $p-100, 350)
+    }
+    /* Fin Botonera */
+    /* Inicia Main  */
+    .nosotros{
+        margin: 30px;
+        padding: 10px;
+        font-size: $textSm-1;
+        color: map-get($map: $paleta, $key: 'third');
+        display: block;
+        .quienesSomos{
+            text-align: center;
+            h2{
+                color: map-get($map: $paleta, $key: 'secondary');
+                font-size: $textMd-1;
+                text-align: center;
+                margin: 0 0 20px 0;
+                font-family: $fontTree;
+            }
+            p{
+                font-family: $fontOne;
+                font-weight: $textRegular;
+            }
+        }
+        .box-contacto-uno{
+            margin: $p-50 0;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .iconos-contacto{
+                text-align: center;
+                .iconos{
+                    width: $p-50;
+                    height: $p-50;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                }
+                p{
+                    font-size: $textSm-1;
+                }
+            }
+        }
+        .box-contacto-dos{
+            padding: 5px;
+            h2{
+                font-size: $textMd-1;
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: center;
+                margin: 20px;
+                font-family: $fontTree;
+            }
+            .formContent{
+                margin: 0;
+            }
+            .botonMsj{
+                font-family: inherit;
+                font-size: 20px;
+                background: map-get($map: $paleta, $key: 'secondary');
+                color: map-get($map: $paleta, $key: 'primary');
+                padding: 0.7em 1em;
+                padding-left: 0.9em;
+                display: flex;
+                align-items: center;
+                border: none;
+                border-radius: 16px;
+                overflow: hidden;
+                transition: all 0.2s;
+                svg{
+                    display: block;
+                    transform-origin: center center;
+                    transition: transform 0.3s ease-in-out;
+                }
+                a{
+                    text-decoration: none;
+                    span{
+                        display: block;
+                        margin-left: 0.3em;
+                        transition: all 0.3s ease-in-out;
+                        text-decoration: none;
+                        color: map-get($map: $paleta, $key: 'primary');
+                    }
+                }
+                &:hover{
+                    .svg-flecha{
+                        animation: fly-1 0.6s ease-in-out infinite alternate;
+                    }
+                    svg{
+                        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+                    }
+                    span{
+                        transform: translateX(5em);
+                    }
+                }
+                &:active{
+                    transform: scale(0.95);
+                }
+                @keyframes fly-1 {
+                    from{
+                        transform: translateY(0.1em);
+                    }
+                    to{
+                    transform: translateY(-0.1em);
+                    }
+                }
+            }
+            .mapa{
+                text-align: center;
+                margin: 20px;
+                padding: 10px;
+                iframe{
+                    width: 90%;
+                    height: 250px;
+                }
+            }
+        }
+        .preguntas{
+            text-align: center;
+            margin: 30px 0;
+            .subNosotros{
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: center;
+                font-size: $textMd-1;
+                margin: 20px 0;
+                font-family: $fontTree;
+            }
+            .textoAcordion{
+                font-size: 1.2rem;
+                text-align: left;
+            }
+        }
+        .cuidadosProducto{
+            margin: 30px 0;
+            .subNosotros{
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: center;
+                font-size: $textMd-1;
+                margin: 20px 0;
+                font-family: $fontTree;
+            }
+        }
+    }
+    /* Fin Main */
+    /* Inicia Aside */
+    .descuento{
+        background-color: map-get($map: $paleta, $key: 'secondary');
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo-descuento{
+            font-size: 1.8rem;
+            font-family: $fontTwo;
+            color: map-get($map: $paleta, $key: 'primary');
+        }
+    }  
+    /* Fin Aside */
+    /* Inicia Footer */
+    .pie-pagina{
+        width: $w-100;
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .grupo-1{
+            margin: 10px;
+            padding: 45px 0;
+            display: block;
+            text-align: left;
+            .box{
+                font-size: 20px;
+                color: map-get($map: $paleta, $key: 'third');
+                h3{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    font-size: $textSm-1;
+                    margin: 10px 0;
+                }
+                a{
+                    color: map-get($map: $paleta, $key: 'third');
+                    text-decoration: none;
+                    margin: 2px;
+                    font-size: 1.2rem;
+                }
+                p{
+                    margin: 10px 0;
+                    color: map-get($map: $paleta, $key: 'third');
+                    font-size: 1.2rem;
+                }
+                .red-social{
+                    a{
+                        display: inline-block;
+                    }
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($map: $paleta, $key: 'secondary');
+                        margin: 10px 3px;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+        .grupo-2{
+            height: 60px;
+            hr{
+                box-sizing: content-box;
+                height: 0;
+                margin-top: $textSm;
+                border: 0;
+                border-top: 2px solid map-get($map: $paleta, $key: 'third');
+            }
+            p{
+                color: map-get($map: $paleta, $key: 'third');
+                font-size: $textSm;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+    /*Fin Footer*/
+}
+
+@media (min-width: 1024px){
+
+    /* Inicia Botonera */
+    .botonera{
+        background-color: map-get($map: $paleta, $key: 'primary');
+        height: 110px;
+        .navbar-brand{
+            text-decoration: none;
+            font-size: $textMd-1;
+            margin: 0 10px;
+            color: map-get($map: $paleta, $key: 'third');
+            .logo-nav{
+                width: $w-100;
+            }
+        }
+        ul{
+            margin: 0 20px;
+            li{
+                margin: 5px;
+                a{
+                    font-size: $textSm-1;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    line-height: 1.6rem;
+                    font-weight: 350;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% $w-100;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover{
+                        color: rgb(251, 255, 3);
+                        font-weight: 600;
+                        background-size: $w-100 2px;
+                    }
+                }
+            }
+        }
+    }
+    /* Fin Botonera */
+    .banMadrid{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+    }
+    .encabezados{
+        @include texto-principal (3.5rem, 120px, 400)
+    }
+    /* Inicia Main  */
+    .nosotros{
+        margin: 40px;
+        padding: 10px;
+        font-size: $textSm-1;
+        color: map-get($map: $paleta, $key: 'third');
+        display: block;
+        .quienesSomos{
+            text-align: center;
+            h2{
+                color: map-get($map: $paleta, $key: 'secondary');
+                font-size: $textMd-1;
+                text-align: center;
+                font-family: $fontTree;
+            }
+            p{
+                font-family: $fontOne;
+                font-weight: $textRegular;
+            }
+        }
+        .box-contacto-uno{
+            margin: 40px 0;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            .iconos-contacto{
+                text-align: center;
+                .iconos{
+                    width: 70px;
+                    height: 70px;
+                    color: map-get($map: $paleta, $key: 'secondary');
+                }
+                p{
+                    font-size: $textSm-1;
+                }
+            }
+        }
+        .box-contacto-dos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 40px 10px;
+            padding: 5px;
+            h2{
+                font-size: $textMd-1;
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: center;
+                margin: 20px;
+                font-family: $fontTree;
+            }
+            .formContent{
+                margin: 0;
+            }
+            .botonMsj{
+                font-family: inherit;
+                font-size: 20px;
+                background: map-get($map: $paleta, $key: 'secondary');
+                color: map-get($map: $paleta, $key: 'primary');
+                padding: 0.7em 1em;
+                padding-left: 0.9em;
+                display: flex;
+                align-items: center;
+                border: none;
+                border-radius: 16px;
+                overflow: hidden;
+                transition: all 0.2s;
+                svg{
+                    display: block;
+                    transform-origin: center center;
+                    transition: transform 0.3s ease-in-out;
+                }
+                a{
+                    text-decoration: none;
+                    span{
+                        display: block;
+                        margin-left: 0.3em;
+                        transition: all 0.3s ease-in-out;
+                        text-decoration: none;
+                        color: map-get($map: $paleta, $key: 'primary');
+                    }
+                }
+                &:hover{
+                    .svg-flecha{
+                        animation: fly-1 0.6s ease-in-out infinite alternate;
+                    }
+                    svg{
+                        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+                    }
+                    span{
+                        transform: translateX(5em);
+                    }
+                }
+                &:active{
+                    transform: scale(0.95);
+                }
+                @keyframes fly-1 {
+                    from{
+                        transform: translateY(0.1em);
+                    }
+                    to{
+                    transform: translateY(-0.1em);
+                    }
+                }
+            }
+            .mapa{
+                text-align: center;
+                margin: 20px;
+                padding: 10px;
+                iframe{
+                    width: 90%;
+                    height: $w-100;
+                }
+            }
+        }
+        .preguntas{
+            text-align: center;
+            .subNosotros{
+                color: map-get($map: $paleta, $key: 'secondary');
+                text-align: left;
+                font-size: $textMd-1;
+                margin: 20px 0;
+                font-family: $fontTree;
+            }
+            .textoAcordion{
+                font-size: 1.3rem;
+                text-align: left;
+            }
+        }
+        .cuidadosProducto{
+            margin: 30px 0;
+            h2{
+                color: map-get($map: $paleta, $key: 'secondary');
+                font-family: $fontTree;
+                font-size: $textMd-1;
+            }
+        }
+    }
+    /* Fin Main */
+    /* Inicia Aside */
+    .descuento{
+        background-color: map-get($map: $paleta, $key: 'secondary');
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo-descuento{
+            font-size: $textMd-1;
+            font-family: $fontTwo;
+            color: map-get($map: $paleta, $key: 'primary');
+        }
+    }
+    /* Fin Aside */  
+    /* Inicia Footer */
+    .pie-pagina{
+        width: $w-100;
+        background-color: map-get($map: $paleta, $key: 'primary');
+        .grupo-1{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: $w-100;
+            margin: auto;
+            padding: 45px 0;
+            text-align: center;
+            .box{
+                font-size: 20px;
+                color: map-get($map: $paleta, $key: 'third');
+                h3{
+                    color: map-get($map: $paleta, $key: 'secondary');
+                    font-size: $textSm-1;
+                    margin: 10px 0;
+                }
+                a{
+                    color: map-get($map: $paleta, $key: 'third');
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    margin: 2px;
+                }
+                p{
+                    margin: 10px 0;
+                    color: map-get($map: $paleta, $key: 'third');
+                    font-size: 1.3rem;
+                }
+                .red-social{
+                    a{
+                        display: inline-block;
+                    }
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($map: $paleta, $key: 'secondary');
+                        margin: 10px 3px;
+                        cursor: pointer;
+                    }
+                } 
+            }
+        }
+        .grupo-2{
+            height: 60px;
+            hr{
+                box-sizing: content-box;
+                height: 0;
+                margin-top: $textSm;
+                border: 0;
+                border-top: 2px solid map-get($map: $paleta, $key: 'third');
+            }
+            p{
+                color: map-get($map: $paleta, $key: 'third');
+                font-size: $textSm;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+    /* Fin Footer */
+}
+
+
+
+   
+
+
+
+
+
+
+
