@@ -3,7 +3,7 @@
 Tienda de camisetas
 “A TODO FUTBOL”
 
-Introducción:
+<h1>Introducción<h1/>
 
 Mi proyecto consiste en una tienda de venta online de camisetas de fútbol. Este está conformado por cinco páginas: Inicio, Selecciones, Equipos, Carrito, y Nosotros. A su vez, se puede visualizar una página de error 404 al hacer click en el botón “Enviar” de la página “Nosotros”.
 
