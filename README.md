@@ -5,7 +5,7 @@
 
 <h2>Páginas</h2>
 
-<p>El “Inicio” contiene publicidad sobre las nuevas camisetas de algunos equipos y selecciones, noticias sobre futuros ingresos, y un video promocionando la nueva camiseta de la Selección Argentina para el mundial de Qatar 2022.
+<p>El “Inicio” contiene publicidad sobre las nuevas camisetas de algunos equipos y selecciones, noticias sobre futuros ingresos, y un video promocionando la nueva camiseta de la Selección Argentina para el mundial de Qatar 2022.<br>
 Esta página finaliza con un formulario de suscripción a novedades, promociones y adelantos.
 Las páginas llamadas “Selecciones” y “Equipos” muestran toda la variedad de camisetas a la venta, con sus respectivos precios, y la opción para filtrar por talle, género y selección o equipo. Las camisetas tienen en la parte inferior de su foto un botón que te redirige al “Carrito”.
 El “Carrito” está compuesto por un formulario de compra donde se pueden cargar todos los datos y un código de descuento.
